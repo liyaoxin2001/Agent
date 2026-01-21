@@ -99,7 +99,7 @@ class OpenAILLM(BaseLLM):
             temperature=temperature,
             base_url=base_url,
             api_key=api_key,
-            model_kwargs={"max_tokens": 1000}  # 视觉模型需要更多token
+            max_tokens=1000  # 视觉模型需要更多token，作为显式参数传递
         )
         
         # 如果模型不支持视觉但尝试使用图片，给出警告
